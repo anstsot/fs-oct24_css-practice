@@ -1,0 +1,55 @@
+.person {
+    width: $person-width;
+    flex-direction: column;
+    align-items: center;
+    display: flex;    
+    padding: 10px;
+    .photo {
+        width: 100%;
+        position: relative;
+        height: 0;
+        padding-bottom: 100%;
+        overflow: hidden;
+        border-radius: 50%;
+    
+        img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 8;
+        }
+    }
+
+    .rank {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(139, 0, 0, 1);
+        position: absolute;
+        top: calc(50% - 16px);
+        right: 10px;
+        background-color: #fff;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        z-index: 5;
+    }
+
+    .details {
+        .name {
+            font-size: 20px;
+            line-height: 23px;
+            color: $main-text-color;
+            font-weight: 700;
+
+            .extra {
+                display: none;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: $person-bg;
+    }
+}
