@@ -1,0 +1,69 @@
+.person {
+    box-sizing: border-box;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: $person-padd;
+
+    &__photo {
+        width: 200px;
+        height: 0;
+        position: relative;
+        padding-bottom: 100%;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: 8;
+        transition: all 1s;
+    
+        img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }        
+    }
+
+    &__rank {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(139, 0, 0, 1);
+        position: absolute;
+        top: calc(50% - 16px);
+        right: 10px;
+        background-color: #fff;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    &__name {
+        font-size: 20px;
+        line-height: 23px;
+        color: $main-text-color;
+        font-weight: 700;
+    }
+    
+    &__extra {
+        display: flex;        
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        line-height: 21px;
+        color: $second-text-color;
+        margin-top: 9px;
+        margin-bottom: 6px;
+    }
+}
+
+.person:hover {
+    background-color: $person-bg;
+    z-index: 5;
+    transform: scale(1.2);
+
+    &__photo {
+        animation: imageScale 2s linear 1;
+    }
+}
