@@ -33,7 +33,6 @@
         width: 32px;
         height: 32px;
         border-radius: 50%;
-        z-index: 5;
     }
 
     .details {
@@ -51,5 +50,7 @@
 
     &:hover {
         background-color: $person-bg;
+        transform: scale(1.1);
+        z-index: 5;
     }
 }
