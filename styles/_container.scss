@@ -1,13 +1,15 @@
 .container {
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(2, $person-width);
-    gap: $horiz-gap $vert-gap;
-    max-width: ($person-width * 2) + $horiz-gap;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, $person-image-size);
+    gap: $vert-gap $horiz-gap;
+    width: ($person-image-size * 2) + ($person-padd * 4) + $horiz-gap;
     margin: 0 auto;
 
     @media (min-width: 1000px) {
-        grid-template-columns: repeat(4, $person-width);
-        max-width: ($person-width * 4) + ($horiz-gap *3);
+        grid-template-columns: repeat(4, $person-image-size);
+        width: ($person-image-size * 4) +($person-padd * 8) + ($horiz-gap *3);
     }
 }
