@@ -1,0 +1,26 @@
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} $effect-duration;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin page-grid {
+  --columns: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), $base-size);
+  justify-content: center;  
+  column-gap: 10px;
+  row-gap: 0;
+
+  @include on-desktop {
+    --columns: 4;
+  }
+
+}

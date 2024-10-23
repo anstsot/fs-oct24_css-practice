@@ -1,0 +1,7 @@
+.people {
+  font-family: Arial, sans-serif;
+  padding: 30px 35px;
+  @include page-grid;
+  margin: auto;
+  overflow-x: scroll;
+}

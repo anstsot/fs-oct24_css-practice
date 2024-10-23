@@ -1,0 +1,86 @@
+.person {
+  box-sizing: border-box;
+  padding: 10px 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: $border-radius-base;
+  background-color: #fff;
+  transition: transform $effect-duration;
+  z-index: 1;
+
+  &:hover {
+    background-color: #EEEEEE;
+    transform: scale(1.2);
+    z-index: 2;
+    transition: transform $effect-duration;
+
+  }
+
+
+  &__photo {
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+
+  &__rank {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $badge-size;
+    height: $badge-size;
+    background-color: #fff;
+    border-radius: 50%;
+    color: $accent-color;
+    right: 10px;
+    top: calc(($base-size - $badge-size) / 2 );
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 50%;
+    transition: all $effect-duration;
+  }
+
+  &:hover  &__image {
+    border-radius: 60px;
+  }
+
+
+  &__name {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+    color: $header-color;
+    margin-bottom: 9px;
+    text-align: center;
+  }
+
+  &__extra {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 200;
+    text-align: center;
+    visibility: hidden;
+  }
+
+  &:hover &__extra {
+    visibility: visible;
+  }
+
+  &__sport:after {
+    content: ',';
+  }
+ 
+  &__pay:before {
+    content: '$';
+  }
+
+  &__pay:after {
+    content: 'M';
+  }
+
+}
