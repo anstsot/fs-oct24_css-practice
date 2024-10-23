@@ -15,18 +15,14 @@
         overflow: hidden;
         border-radius: 50%;
         margin-bottom: 8;
+        transition: all 1s;
     
         img {
             position: absolute;
             height: 100%;
             width: 100%;
             object-fit: cover;
-        }
-
-        &:hover {
-            transform: scale(1.02);
-            border-radius: 60px;
-        }
+        }        
     }
 
     &__rank {
@@ -60,11 +56,14 @@
         margin-top: 9px;
         margin-bottom: 6px;
     }
-    
-    &:hover {
-        background-color: $person-bg;
-        z-index: 5;
-        transform: scale(1.2);
-    }
 }
 
+.person:hover {
+    background-color: $person-bg;
+    z-index: 5;
+    transform: scale(1.2);
+
+    &__photo {
+        animation: imageScale 2s linear 1;
+    }
+}
